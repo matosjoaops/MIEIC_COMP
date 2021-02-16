@@ -54,7 +54,6 @@ TOKEN:
 {
     < INTEGER: (["0" - "9"])+ >
     | < LF: "\n" >
-    | < SYMBOL: (["A"-"Z","a"-"z"])(["0"-"9","A"-"Z","a"-"z"])*
 }
 
 SimpleNode Expression(): {}
@@ -64,7 +63,6 @@ SimpleNode Expression(): {}
 
 void Expr1() #void : {}
 {
-    Expr4() |
     Expr2(1) 
     [
         ("+" Expr2(1) #Add(2) 
@@ -89,9 +87,4 @@ void Expr3(int sign) #void : {Token t;}
     } #Term
     | "-" Expr3(-1)
     | "(" Expr1() ")"
-}
-
-void Expr4() #void : {Token symbol, number;}
-{
-    symbol = <SYMBOL> "=" number = <INTEGER> {}
 }

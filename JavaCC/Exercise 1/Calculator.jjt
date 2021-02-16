@@ -54,6 +54,7 @@ TOKEN:
 {
     < INTEGER: (["0" - "9"])+ >
     | < LF: "\n" >
+    | < SYMBOL: (["A"-"Z","a"-"z"])(["0"-"9","A"-"Z","a"-"z"])*
 }
 
 SimpleNode Expression(): {}
