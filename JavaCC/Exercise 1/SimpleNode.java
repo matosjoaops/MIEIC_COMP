@@ -76,7 +76,7 @@ class SimpleNode implements Node {
       case CalculatorTreeConstants.JJTSUB: System.out.println("\t[ - ]"); break;
       case CalculatorTreeConstants.JJTMUL: System.out.println("\t[ * ]"); break;
       case CalculatorTreeConstants.JJTDIV: System.out.println("\t[ / ]"); break;
-      case CalculatorTreeConstants.JJTASSIGN: System.out.println("\t[ = ]"); break;
+      //case CalculatorTreeConstants.JJTASSIGN: System.out.println("\t[ = ]"); break;
     }
 
     if (children == null) System.out.println("\t[" + this.val + "]");

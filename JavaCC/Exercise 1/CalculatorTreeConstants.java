@@ -3,23 +3,25 @@ public interface CalculatorTreeConstants
 {
   public int JJTEXPRESSION = 0;
   public int JJTVOID = 1;
-  public int JJTASSIGN = 2;
-  public int JJTADD = 3;
-  public int JJTSUB = 4;
-  public int JJTMUL = 5;
-  public int JJTDIV = 6;
-  public int JJTTERM = 7;
+  public int JJTADD = 2;
+  public int JJTSUB = 3;
+  public int JJTMUL = 4;
+  public int JJTDIV = 5;
+  public int JJTTERM = 6;
+  public int JJTEXPR4 = 7;
+  public int JJTASSIGN = 8;
 
 
   public String[] jjtNodeName = {
     "Expression",
     "void",
-    "Assign",
     "Add",
     "Sub",
     "Mul",
     "Div",
     "Term",
+    "Expr4",
+    "Assign",
   };
 }
-/* JavaCC - OriginalChecksum=6334394b05418e0392b36956d3a1900a (do not edit this line) */
+/* JavaCC - OriginalChecksum=802863814ee49841ff52e2eda5d1da5c (do not edit this line) */
