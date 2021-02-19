@@ -59,14 +59,7 @@ TOKEN:
 
 SimpleNode Expression(): {}
 {
-    Expr0() <LF> {return jjtThis;}
-}
-
-void Expr0() #void : {Token t1, t2;}
-{
-    [
-       
-    ] Expr1() ";"
+    Expr1() <LF> {return jjtThis;}
 }
 
 void Expr1() #void : {}
@@ -94,5 +87,5 @@ void Expr3(int sign) #void : {Token t;}
         jjtThis.val = sign * Integer.parseInt(t.image);
     } #Term
     | "-" Expr3(-1)
-    | "(" Expr0() ")"
+    | "(" Expr1() ")"
 }
