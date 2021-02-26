@@ -14,6 +14,12 @@ public class Calculator
         Calculator myCalc = new Calculator(System.in);
         SimpleNode root = myCalc.Expression();
 
+        if (root == null)
+        {
+            System.out.println("An error has occurred!");
+            return;
+        } 
+
         root.dump("");
 
         System.out.println(myCalc.eval(root));
@@ -73,7 +79,16 @@ void error_skipto(String checkpoint) {
 
 SimpleNode Expression(): {}
 {
-    Expr1(1) <LF> {return jjtThis;}  
+    try
+    {
+      Expr1(1) <LF> {return jjtThis;}    
+    }
+    catch (ParseException e)
+    {
+        System.out.println(e.toString());
+        System.out.println("Invalid expression!");
+        return null;
+    }
 }
 
 void Expr1(int sign) #void : {}
@@ -96,6 +111,7 @@ void Expr2(int sign) #void : {}
 
 void Expr3(int sign) #void : {Token t;}
 {
+    
     t=<INTEGER>
     {
         jjtThis.val = sign * Integer.parseInt(t.image);
@@ -103,10 +119,11 @@ void Expr3(int sign) #void : {Token t;}
     | "-" Expr3(-1)
     | try
         {
-           "(" Expr1(sign) ")" 
+        "(" Expr1(sign) ")" 
         }
         catch (ParseException e)
         {
             System.out.println("Missing brackets!");
+            throw e;
         }
 }

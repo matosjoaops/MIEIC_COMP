@@ -18,6 +18,12 @@ public class Calculator/*@bgen(jjtree)*/implements CalculatorTreeConstants/*@ege
         Calculator myCalc = new Calculator(System.in);
         SimpleNode root = myCalc.Expression();
 
+        if (root == null)
+        {
+            System.out.println("An error has occurred!");
+            return;
+        } 
+
         root.dump("");
 
         System.out.println(myCalc.eval(root));
@@ -94,12 +100,16 @@ SimpleNode Expression(): {/*@bgen(jjtree) Expression */
 {/*@bgen(jjtree) Expression */
     try {
 /*@egen*/
-    Expr1(1) <LF>/*@bgen(jjtree)*/
-                  {
-                    jjtree.closeNodeScope(jjtn000, true);
-                    jjtc000 = false;
-                  }
-/*@egen*/ {return jjtn000;}/*@bgen(jjtree)*/
+    try
+    {
+      Expr1(1) <LF> {return jjtn000;}    
+    }
+    catch (ParseException e)
+    {
+        System.out.println(e.toString());
+        System.out.println("Invalid expression!");
+        return null;
+    }/*@bgen(jjtree)*/
     } catch (Throwable jjte000) {
       if (jjtc000) {
         jjtree.clearNodeScope(jjtn000);
@@ -119,7 +129,7 @@ SimpleNode Expression(): {/*@bgen(jjtree) Expression */
         jjtree.closeNodeScope(jjtn000, true);
       }
     }
-/*@egen*/  
+/*@egen*/
 }
 
 void Expr1(int sign)       : {}
@@ -250,6 +260,7 @@ void Expr2(int sign)       : {}
 
 void Expr3(int sign)       : {Token t;}
 {
+    
     t=<INTEGER>/*@bgen(jjtree) Term */
     {
       SimpleNode jjtn001 = new SimpleNode(JJTTERM);
@@ -275,10 +286,11 @@ void Expr3(int sign)       : {Token t;}
     | "-" Expr3(-1)
     | try
         {
-           "(" Expr1(sign) ")" 
+        "(" Expr1(sign) ")" 
         }
         catch (ParseException e)
         {
             System.out.println("Missing brackets!");
+            throw e;
         }
 }

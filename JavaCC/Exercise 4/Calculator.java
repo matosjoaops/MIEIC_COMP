@@ -8,6 +8,12 @@ public class Calculator/*@bgen(jjtree)*/implements CalculatorTreeConstants, Calc
         Calculator myCalc = new Calculator(System.in);
         SimpleNode root = myCalc.Expression();
 
+        if (root == null)
+        {
+            System.out.println("An error has occurred!");
+            return;
+        }
+
         root.dump("");
 
         System.out.println(myCalc.eval(root));
@@ -63,11 +69,15 @@ try {ParseException e = generateParseException();  // generate the exception obj
   boolean jjtc000 = true;
   jjtree.openNodeScope(jjtn000);
     try {
-      Expr1(1);
-      jj_consume_token(LF);
-jjtree.closeNodeScope(jjtn000, true);
-                    jjtc000 = false;
+      try {
+        Expr1(1);
+        jj_consume_token(LF);
 {if ("" != null) return jjtn000;}
+      } catch (ParseException e) {
+System.out.println(e.toString());
+        System.out.println("Invalid expression!");
+        {if ("" != null) return null;}
+      }
     } catch (Throwable jjte000) {
 if (jjtc000) {
         jjtree.clearNodeScope(jjtn000);
@@ -270,6 +280,7 @@ if (jjtc001) {
         jj_consume_token(11);
       } catch (ParseException e) {
 System.out.println("Missing brackets!");
+            {if (true) throw e;}
       }
       break;
       }
