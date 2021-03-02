@@ -245,15 +245,11 @@ public class Compiler implements CompilerConstants {
     switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
     case 22:{
       jj_consume_token(22);
-      jj_consume_token(20);
-      jj_consume_token(21);
+      Type1();
       break;
       }
     case 23:{
       jj_consume_token(23);
-      break;
-      }{
-      jj_consume_token(22);
       break;
       }
     case IDENTIFIER:{
@@ -264,6 +260,19 @@ public class Compiler implements CompilerConstants {
       jj_la1[12] = jj_gen;
       jj_consume_token(-1);
       throw new ParseException();
+    }
+}
+
+  static final public void Type1() throws ParseException {
+    switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
+    case 20:{
+      jj_consume_token(20);
+      jj_consume_token(21);
+      break;
+      }
+    default:
+      jj_la1[13] = jj_gen;
+      ;
     }
 }
 
@@ -289,7 +298,7 @@ public class Compiler implements CompilerConstants {
           break;
           }
         default:
-          jj_la1[13] = jj_gen;
+          jj_la1[14] = jj_gen;
           break label_10;
         }
         Statement();
@@ -332,7 +341,7 @@ public class Compiler implements CompilerConstants {
       break;
       }
     default:
-      jj_la1[14] = jj_gen;
+      jj_la1[15] = jj_gen;
       jj_consume_token(-1);
       throw new ParseException();
     }
@@ -356,7 +365,7 @@ public class Compiler implements CompilerConstants {
       break;
       }
     default:
-      jj_la1[15] = jj_gen;
+      jj_la1[16] = jj_gen;
       jj_consume_token(-1);
       throw new ParseException();
     }
@@ -366,195 +375,73 @@ public class Compiler implements CompilerConstants {
     switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
     case INTEGERLITERAL:{
       jj_consume_token(INTEGERLITERAL);
-      switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
-      case 5:
-      case 20:
-      case 33:
-      case 34:
-      case 35:
-      case 36:
-      case 37:
-      case 38:{
-        ExpressionLRFix();
-        break;
-        }
-      default:
-        jj_la1[16] = jj_gen;
-        ;
-      }
+      ExpressionLRFix();
       break;
       }
     case 28:{
       jj_consume_token(28);
-      switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
-      case 5:
-      case 20:
-      case 33:
-      case 34:
-      case 35:
-      case 36:
-      case 37:
-      case 38:{
-        ExpressionLRFix();
-        break;
-        }
-      default:
-        jj_la1[17] = jj_gen;
-        ;
-      }
+      ExpressionLRFix();
       break;
       }
     case 29:{
       jj_consume_token(29);
-      switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
-      case 5:
-      case 20:
-      case 33:
-      case 34:
-      case 35:
-      case 36:
-      case 37:
-      case 38:{
-        ExpressionLRFix();
-        break;
-        }
-      default:
-        jj_la1[18] = jj_gen;
-        ;
-      }
+      ExpressionLRFix();
       break;
       }
     case IDENTIFIER:{
       jj_consume_token(IDENTIFIER);
-      switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
-      case 5:
-      case 20:
-      case 33:
-      case 34:
-      case 35:
-      case 36:
-      case 37:
-      case 38:{
-        ExpressionLRFix();
-        break;
-        }
-      default:
-        jj_la1[19] = jj_gen;
-        ;
-      }
+      ExpressionLRFix();
       break;
       }
     case 30:{
       jj_consume_token(30);
-      switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
-      case 5:
-      case 20:
-      case 33:
-      case 34:
-      case 35:
-      case 36:
-      case 37:
-      case 38:{
-        ExpressionLRFix();
-        break;
-        }
-      default:
-        jj_la1[20] = jj_gen;
-        ;
-      }
+      ExpressionLRFix();
       break;
       }
     case 31:{
       jj_consume_token(31);
-      jj_consume_token(22);
-      jj_consume_token(20);
-      Expression();
-      jj_consume_token(21);
-      switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
-      case 5:
-      case 20:
-      case 33:
-      case 34:
-      case 35:
-      case 36:
-      case 37:
-      case 38:{
-        ExpressionLRFix();
-        break;
-        }
-      default:
-        jj_la1[21] = jj_gen;
-        ;
-      }
-      break;
-      }{
-      jj_consume_token(31);
-      jj_consume_token(IDENTIFIER);
-      jj_consume_token(12);
-      jj_consume_token(14);
-      switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
-      case 5:
-      case 20:
-      case 33:
-      case 34:
-      case 35:
-      case 36:
-      case 37:
-      case 38:{
-        ExpressionLRFix();
-        break;
-        }
-      default:
-        jj_la1[22] = jj_gen;
-        ;
-      }
+      Expression1();
       break;
       }
     case 32:{
       jj_consume_token(32);
       Expression();
-      switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
-      case 5:
-      case 20:
-      case 33:
-      case 34:
-      case 35:
-      case 36:
-      case 37:
-      case 38:{
-        ExpressionLRFix();
-        break;
-        }
-      default:
-        jj_la1[23] = jj_gen;
-        ;
-      }
+      ExpressionLRFix();
       break;
       }
     case 12:{
       jj_consume_token(12);
       Expression();
       jj_consume_token(14);
-      switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
-      case 5:
-      case 20:
-      case 33:
-      case 34:
-      case 35:
-      case 36:
-      case 37:
-      case 38:{
-        ExpressionLRFix();
-        break;
-        }
-      default:
-        jj_la1[24] = jj_gen;
-        ;
-      }
+      ExpressionLRFix();
       break;
       }
     default:
-      jj_la1[25] = jj_gen;
+      jj_la1[17] = jj_gen;
+      jj_consume_token(-1);
+      throw new ParseException();
+    }
+}
+
+  static final public void Expression1() throws ParseException {
+    switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
+    case 22:{
+      jj_consume_token(22);
+      jj_consume_token(20);
+      Expression();
+      jj_consume_token(21);
+      ExpressionLRFix();
+      break;
+      }
+    case IDENTIFIER:{
+      jj_consume_token(IDENTIFIER);
+      jj_consume_token(12);
+      jj_consume_token(14);
+      ExpressionLRFix();
+      break;
+      }
+    default:
+      jj_la1[18] = jj_gen;
       jj_consume_token(-1);
       throw new ParseException();
     }
@@ -562,6 +449,8 @@ public class Compiler implements CompilerConstants {
 
   static final public void ExpressionLRFix() throws ParseException {
     switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
+    case 5:
+    case 20:
     case 33:
     case 34:
     case 35:
@@ -569,98 +458,79 @@ public class Compiler implements CompilerConstants {
     case 37:
     case 38:{
       switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
-      case 33:{
-        jj_consume_token(33);
-        break;
-        }
-      case 34:{
-        jj_consume_token(34);
-        break;
-        }
-      case 35:{
-        jj_consume_token(35);
-        break;
-        }
-      case 36:{
-        jj_consume_token(36);
-        break;
-        }
-      case 37:{
-        jj_consume_token(37);
-        break;
-        }
+      case 33:
+      case 34:
+      case 35:
+      case 36:
+      case 37:
       case 38:{
-        jj_consume_token(38);
+        switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
+        case 33:{
+          jj_consume_token(33);
+          break;
+          }
+        case 34:{
+          jj_consume_token(34);
+          break;
+          }
+        case 35:{
+          jj_consume_token(35);
+          break;
+          }
+        case 36:{
+          jj_consume_token(36);
+          break;
+          }
+        case 37:{
+          jj_consume_token(37);
+          break;
+          }
+        case 38:{
+          jj_consume_token(38);
+          break;
+          }
+        default:
+          jj_la1[19] = jj_gen;
+          jj_consume_token(-1);
+          throw new ParseException();
+        }
+        Expression();
+        ExpressionLRFix();
+        break;
+        }
+      case 20:{
+        jj_consume_token(20);
+        Expression();
+        jj_consume_token(21);
+        ExpressionLRFix();
+        break;
+        }
+      case 5:{
+        jj_consume_token(5);
+        ExpressionLRFix1();
         break;
         }
       default:
-        jj_la1[26] = jj_gen;
+        jj_la1[20] = jj_gen;
         jj_consume_token(-1);
         throw new ParseException();
       }
-      Expression();
-      switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
-      case 5:
-      case 20:
-      case 33:
-      case 34:
-      case 35:
-      case 36:
-      case 37:
-      case 38:{
-        ExpressionLRFix();
-        break;
-        }
-      default:
-        jj_la1[27] = jj_gen;
-        ;
-      }
       break;
       }
-    case 20:{
-      jj_consume_token(20);
-      Expression();
-      jj_consume_token(21);
-      switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
-      case 5:
-      case 20:
-      case 33:
-      case 34:
-      case 35:
-      case 36:
-      case 37:
-      case 38:{
-        ExpressionLRFix();
-        break;
-        }
-      default:
-        jj_la1[28] = jj_gen;
-        ;
-      }
-      break;
-      }
-    case 5:{
-      jj_consume_token(5);
+    default:
+      jj_la1[21] = jj_gen;
+      ;
+    }
+}
+
+  static final public void ExpressionLRFix1() throws ParseException {
+    switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
+    case 39:{
       jj_consume_token(39);
-      switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
-      case 5:
-      case 20:
-      case 33:
-      case 34:
-      case 35:
-      case 36:
-      case 37:
-      case 38:{
-        ExpressionLRFix();
-        break;
-        }
-      default:
-        jj_la1[29] = jj_gen;
-        ;
-      }
+      ExpressionLRFix();
       break;
-      }{
-      jj_consume_token(5);
+      }
+    case IDENTIFIER:{
       jj_consume_token(IDENTIFIER);
       jj_consume_token(12);
       switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
@@ -688,7 +558,7 @@ public class Compiler implements CompilerConstants {
             break;
             }
           default:
-            jj_la1[30] = jj_gen;
+            jj_la1[22] = jj_gen;
             break label_11;
           }
           Expression();
@@ -696,30 +566,15 @@ public class Compiler implements CompilerConstants {
         break;
         }
       default:
-        jj_la1[31] = jj_gen;
+        jj_la1[23] = jj_gen;
         ;
       }
       jj_consume_token(14);
-      switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
-      case 5:
-      case 20:
-      case 33:
-      case 34:
-      case 35:
-      case 36:
-      case 37:
-      case 38:{
-        ExpressionLRFix();
-        break;
-        }
-      default:
-        jj_la1[32] = jj_gen;
-        ;
-      }
+      ExpressionLRFix();
       break;
       }
     default:
-      jj_la1[33] = jj_gen;
+      jj_la1[24] = jj_gen;
       jj_consume_token(-1);
       throw new ParseException();
     }
@@ -735,7 +590,7 @@ public class Compiler implements CompilerConstants {
   static public Token jj_nt;
   static private int jj_ntk;
   static private int jj_gen;
-  static final private int[] jj_la1 = new int[34];
+  static final private int[] jj_la1 = new int[25];
   static private int[] jj_la1_0;
   static private int[] jj_la1_1;
   static {
@@ -743,10 +598,10 @@ public class Compiler implements CompilerConstants {
 	   jj_la1_init_1();
 	}
 	private static void jj_la1_init_0() {
-	   jj_la1_0 = new int[] {0x10,0x20,0x100,0xc00004,0x800,0x2000,0xc00004,0xc00004,0xf500120c,0xc00004,0xf500120c,0xc10004,0xc00004,0xf500120c,0xf500120c,0x8100000,0x100020,0x100020,0x100020,0x100020,0x100020,0x100020,0x100020,0x100020,0x100020,0xf000100c,0x0,0x100020,0x100020,0x100020,0xf000100c,0xf000100c,0x100020,0x100020,};
+	   jj_la1_0 = new int[] {0x10,0x20,0x100,0xc00004,0x800,0x2000,0xc00004,0xc00004,0xf500120c,0xc00004,0xf500120c,0xc10004,0xc00004,0x100000,0xf500120c,0xf500120c,0x8100000,0xf000100c,0x400004,0x0,0x100020,0x100020,0xf000100c,0xf000100c,0x4,};
 	}
 	private static void jj_la1_init_1() {
-	   jj_la1_1 = new int[] {0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x1,0x0,0x1,0x0,0x0,0x1,0x1,0x0,0x7e,0x7e,0x7e,0x7e,0x7e,0x7e,0x7e,0x7e,0x7e,0x1,0x7e,0x7e,0x7e,0x7e,0x1,0x1,0x7e,0x7e,};
+	   jj_la1_1 = new int[] {0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x1,0x0,0x1,0x0,0x0,0x0,0x1,0x1,0x0,0x1,0x0,0x7e,0x7e,0x7e,0x1,0x1,0x80,};
 	}
 
   /** Constructor with InputStream. */
@@ -767,7 +622,7 @@ public class Compiler implements CompilerConstants {
 	 token = new Token();
 	 jj_ntk = -1;
 	 jj_gen = 0;
-	 for (int i = 0; i < 34; i++) jj_la1[i] = -1;
+	 for (int i = 0; i < 25; i++) jj_la1[i] = -1;
   }
 
   /** Reinitialise. */
@@ -781,7 +636,7 @@ public class Compiler implements CompilerConstants {
 	 token = new Token();
 	 jj_ntk = -1;
 	 jj_gen = 0;
-	 for (int i = 0; i < 34; i++) jj_la1[i] = -1;
+	 for (int i = 0; i < 25; i++) jj_la1[i] = -1;
   }
 
   /** Constructor. */
@@ -798,7 +653,7 @@ public class Compiler implements CompilerConstants {
 	 token = new Token();
 	 jj_ntk = -1;
 	 jj_gen = 0;
-	 for (int i = 0; i < 34; i++) jj_la1[i] = -1;
+	 for (int i = 0; i < 25; i++) jj_la1[i] = -1;
   }
 
   /** Reinitialise. */
@@ -816,7 +671,7 @@ public class Compiler implements CompilerConstants {
 	 token = new Token();
 	 jj_ntk = -1;
 	 jj_gen = 0;
-	 for (int i = 0; i < 34; i++) jj_la1[i] = -1;
+	 for (int i = 0; i < 25; i++) jj_la1[i] = -1;
   }
 
   /** Constructor with generated Token Manager. */
@@ -832,7 +687,7 @@ public class Compiler implements CompilerConstants {
 	 token = new Token();
 	 jj_ntk = -1;
 	 jj_gen = 0;
-	 for (int i = 0; i < 34; i++) jj_la1[i] = -1;
+	 for (int i = 0; i < 25; i++) jj_la1[i] = -1;
   }
 
   /** Reinitialise. */
@@ -841,7 +696,7 @@ public class Compiler implements CompilerConstants {
 	 token = new Token();
 	 jj_ntk = -1;
 	 jj_gen = 0;
-	 for (int i = 0; i < 34; i++) jj_la1[i] = -1;
+	 for (int i = 0; i < 25; i++) jj_la1[i] = -1;
   }
 
   static private Token jj_consume_token(int kind) throws ParseException {
@@ -897,7 +752,7 @@ public class Compiler implements CompilerConstants {
 	   la1tokens[jj_kind] = true;
 	   jj_kind = -1;
 	 }
-	 for (int i = 0; i < 34; i++) {
+	 for (int i = 0; i < 25; i++) {
 	   if (jj_la1[i] == jj_gen) {
 		 for (int j = 0; j < 32; j++) {
 		   if ((jj_la1_0[i] & (1<<j)) != 0) {

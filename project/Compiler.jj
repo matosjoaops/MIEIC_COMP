@@ -61,10 +61,14 @@ void MethodDeclaration1() : {}
 
 void Type() : {}
 {
-    "int" "[" "]"
+    "int" Type1()
     | "boolean"
-    | "int"
     | <IDENTIFIER>
+}
+
+void Type1() : {}
+{
+    ("[" "]")?
 }
 
 void Statement() : {}
@@ -84,21 +88,31 @@ void Statement1() : {}
 
 void Expression() : {}
 {
-    <INTEGERLITERAL> (ExpressionLRFix())?
-    | "true" (ExpressionLRFix())?
-    | "false" (ExpressionLRFix())?
-    | <IDENTIFIER> (ExpressionLRFix())?
-    | "this" (ExpressionLRFix())?
-    | "new" "int" "[" Expression() "]" (ExpressionLRFix())?
-    | "new" <IDENTIFIER> "(" ")" (ExpressionLRFix())?
-    | "!" Expression() (ExpressionLRFix())?
-    | "(" Expression() ")" (ExpressionLRFix())?
+    <INTEGERLITERAL> ExpressionLRFix()
+    | "true" ExpressionLRFix()
+    | "false" ExpressionLRFix()
+    | <IDENTIFIER> ExpressionLRFix()
+    | "this" ExpressionLRFix()
+    | "new" Expression1()
+    | "!" Expression() ExpressionLRFix()
+    | "(" Expression() ")" ExpressionLRFix()
+}
+
+void Expression1() : {}
+{
+    "int" "[" Expression() "]" ExpressionLRFix()
+    | <IDENTIFIER> "(" ")" ExpressionLRFix()
 }
 
 void ExpressionLRFix() : {}
 {
-    ("&&" | "<" | "+" | "-" | "*" | "/") Expression() (ExpressionLRFix())?
-    | "[" Expression() "]" (ExpressionLRFix())?
-    | "." "length" (ExpressionLRFix())?
-    | "." <IDENTIFIER> "(" (Expression() (Expression())*)? ")" (ExpressionLRFix())?
+    (("&&" | "<" | "+" | "-" | "*" | "/") Expression() ExpressionLRFix()
+    | "[" Expression() "]" ExpressionLRFix()
+    | "." ExpressionLRFix1())?
+}
+
+void ExpressionLRFix1() : {}
+{
+    "length" ExpressionLRFix()
+    | <IDENTIFIER> "(" (Expression() (Expression())*)? ")" ExpressionLRFix()
 }
