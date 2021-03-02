@@ -57,7 +57,6 @@ public interface CompilerConstants {
     "\"*\"",
     "\"/\"",
     "\"length\"",
-    "\"\"",
   };
 
 }

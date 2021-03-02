@@ -347,27 +347,102 @@ public class Compiler implements CompilerConstants {
     switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
     case INTEGERLITERAL:{
       jj_consume_token(INTEGERLITERAL);
-      ExpressionLRFix();
+      switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
+      case 4:
+      case 19:
+      case 32:
+      case 33:
+      case 34:
+      case 35:
+      case 36:
+      case 37:{
+        ExpressionLRFix();
+        break;
+        }
+      default:
+        jj_la1[15] = jj_gen;
+        ;
+      }
       break;
       }
     case 27:{
       jj_consume_token(27);
-      ExpressionLRFix();
+      switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
+      case 4:
+      case 19:
+      case 32:
+      case 33:
+      case 34:
+      case 35:
+      case 36:
+      case 37:{
+        ExpressionLRFix();
+        break;
+        }
+      default:
+        jj_la1[16] = jj_gen;
+        ;
+      }
       break;
       }
     case 28:{
       jj_consume_token(28);
-      ExpressionLRFix();
+      switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
+      case 4:
+      case 19:
+      case 32:
+      case 33:
+      case 34:
+      case 35:
+      case 36:
+      case 37:{
+        ExpressionLRFix();
+        break;
+        }
+      default:
+        jj_la1[17] = jj_gen;
+        ;
+      }
       break;
       }
     case IDENTIFIER:{
       jj_consume_token(IDENTIFIER);
-      ExpressionLRFix();
+      switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
+      case 4:
+      case 19:
+      case 32:
+      case 33:
+      case 34:
+      case 35:
+      case 36:
+      case 37:{
+        ExpressionLRFix();
+        break;
+        }
+      default:
+        jj_la1[18] = jj_gen;
+        ;
+      }
       break;
       }
     case 29:{
       jj_consume_token(29);
-      ExpressionLRFix();
+      switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
+      case 4:
+      case 19:
+      case 32:
+      case 33:
+      case 34:
+      case 35:
+      case 36:
+      case 37:{
+        ExpressionLRFix();
+        break;
+        }
+      default:
+        jj_la1[19] = jj_gen;
+        ;
+      }
       break;
       }
     case 30:{
@@ -376,31 +451,91 @@ public class Compiler implements CompilerConstants {
       jj_consume_token(19);
       Expression();
       jj_consume_token(20);
-      ExpressionLRFix();
+      switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
+      case 4:
+      case 19:
+      case 32:
+      case 33:
+      case 34:
+      case 35:
+      case 36:
+      case 37:{
+        ExpressionLRFix();
+        break;
+        }
+      default:
+        jj_la1[20] = jj_gen;
+        ;
+      }
       break;
       }{
       jj_consume_token(30);
       jj_consume_token(IDENTIFIER);
       jj_consume_token(11);
       jj_consume_token(13);
-      ExpressionLRFix();
+      switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
+      case 4:
+      case 19:
+      case 32:
+      case 33:
+      case 34:
+      case 35:
+      case 36:
+      case 37:{
+        ExpressionLRFix();
+        break;
+        }
+      default:
+        jj_la1[21] = jj_gen;
+        ;
+      }
       break;
       }
     case 31:{
       jj_consume_token(31);
       Expression();
-      ExpressionLRFix();
+      switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
+      case 4:
+      case 19:
+      case 32:
+      case 33:
+      case 34:
+      case 35:
+      case 36:
+      case 37:{
+        ExpressionLRFix();
+        break;
+        }
+      default:
+        jj_la1[22] = jj_gen;
+        ;
+      }
       break;
       }
     case 11:{
       jj_consume_token(11);
       Expression();
       jj_consume_token(13);
-      ExpressionLRFix();
+      switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
+      case 4:
+      case 19:
+      case 32:
+      case 33:
+      case 34:
+      case 35:
+      case 36:
+      case 37:{
+        ExpressionLRFix();
+        break;
+        }
+      default:
+        jj_la1[23] = jj_gen;
+        ;
+      }
       break;
       }
     default:
-      jj_la1[15] = jj_gen;
+      jj_la1[24] = jj_gen;
       jj_consume_token(-1);
       throw new ParseException();
     }
@@ -440,25 +575,70 @@ public class Compiler implements CompilerConstants {
         break;
         }
       default:
-        jj_la1[16] = jj_gen;
+        jj_la1[25] = jj_gen;
         jj_consume_token(-1);
         throw new ParseException();
       }
       Expression();
-      ExpressionLRFix();
+      switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
+      case 4:
+      case 19:
+      case 32:
+      case 33:
+      case 34:
+      case 35:
+      case 36:
+      case 37:{
+        ExpressionLRFix();
+        break;
+        }
+      default:
+        jj_la1[26] = jj_gen;
+        ;
+      }
       break;
       }
     case 19:{
       jj_consume_token(19);
       Expression();
       jj_consume_token(20);
-      ExpressionLRFix();
+      switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
+      case 4:
+      case 19:
+      case 32:
+      case 33:
+      case 34:
+      case 35:
+      case 36:
+      case 37:{
+        ExpressionLRFix();
+        break;
+        }
+      default:
+        jj_la1[27] = jj_gen;
+        ;
+      }
       break;
       }
     case 4:{
       jj_consume_token(4);
       jj_consume_token(38);
-      ExpressionLRFix();
+      switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
+      case 4:
+      case 19:
+      case 32:
+      case 33:
+      case 34:
+      case 35:
+      case 36:
+      case 37:{
+        ExpressionLRFix();
+        break;
+        }
+      default:
+        jj_la1[28] = jj_gen;
+        ;
+      }
       break;
       }{
       jj_consume_token(4);
@@ -489,7 +669,7 @@ public class Compiler implements CompilerConstants {
             break;
             }
           default:
-            jj_la1[17] = jj_gen;
+            jj_la1[29] = jj_gen;
             break label_11;
           }
           Expression();
@@ -497,19 +677,30 @@ public class Compiler implements CompilerConstants {
         break;
         }
       default:
-        jj_la1[18] = jj_gen;
+        jj_la1[30] = jj_gen;
         ;
       }
       jj_consume_token(13);
-      ExpressionLRFix();
-      break;
+      switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
+      case 4:
+      case 19:
+      case 32:
+      case 33:
+      case 34:
+      case 35:
+      case 36:
+      case 37:{
+        ExpressionLRFix();
+        break;
+        }
+      default:
+        jj_la1[31] = jj_gen;
+        ;
       }
-    case 39:{
-      jj_consume_token(39);
       break;
       }
     default:
-      jj_la1[19] = jj_gen;
+      jj_la1[32] = jj_gen;
       jj_consume_token(-1);
       throw new ParseException();
     }
@@ -525,7 +716,7 @@ public class Compiler implements CompilerConstants {
   static public Token jj_nt;
   static private int jj_ntk;
   static private int jj_gen;
-  static final private int[] jj_la1 = new int[20];
+  static final private int[] jj_la1 = new int[33];
   static private int[] jj_la1_0;
   static private int[] jj_la1_1;
   static {
@@ -533,10 +724,10 @@ public class Compiler implements CompilerConstants {
 	   jj_la1_init_1();
 	}
 	private static void jj_la1_init_0() {
-	   jj_la1_0 = new int[] {0x8,0x10,0x80,0x600002,0x400,0x1000,0x600002,0x600002,0xfa800906,0x600002,0xfa800906,0x400,0x600002,0xfa800906,0xfa800906,0xf8000806,0x0,0xf8000806,0xf8000806,0x80010,};
+	   jj_la1_0 = new int[] {0x8,0x10,0x80,0x600002,0x400,0x1000,0x600002,0x600002,0xfa800906,0x600002,0xfa800906,0x400,0x600002,0xfa800906,0xfa800906,0x80010,0x80010,0x80010,0x80010,0x80010,0x80010,0x80010,0x80010,0x80010,0xf8000806,0x0,0x80010,0x80010,0x80010,0xf8000806,0xf8000806,0x80010,0x80010,};
 	}
 	private static void jj_la1_init_1() {
-	   jj_la1_1 = new int[] {0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x3f,0x0,0x0,0xbf,};
+	   jj_la1_1 = new int[] {0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x3f,0x3f,0x3f,0x3f,0x3f,0x3f,0x3f,0x3f,0x3f,0x0,0x3f,0x3f,0x3f,0x3f,0x0,0x0,0x3f,0x3f,};
 	}
 
   /** Constructor with InputStream. */
@@ -557,7 +748,7 @@ public class Compiler implements CompilerConstants {
 	 token = new Token();
 	 jj_ntk = -1;
 	 jj_gen = 0;
-	 for (int i = 0; i < 20; i++) jj_la1[i] = -1;
+	 for (int i = 0; i < 33; i++) jj_la1[i] = -1;
   }
 
   /** Reinitialise. */
@@ -571,7 +762,7 @@ public class Compiler implements CompilerConstants {
 	 token = new Token();
 	 jj_ntk = -1;
 	 jj_gen = 0;
-	 for (int i = 0; i < 20; i++) jj_la1[i] = -1;
+	 for (int i = 0; i < 33; i++) jj_la1[i] = -1;
   }
 
   /** Constructor. */
@@ -588,7 +779,7 @@ public class Compiler implements CompilerConstants {
 	 token = new Token();
 	 jj_ntk = -1;
 	 jj_gen = 0;
-	 for (int i = 0; i < 20; i++) jj_la1[i] = -1;
+	 for (int i = 0; i < 33; i++) jj_la1[i] = -1;
   }
 
   /** Reinitialise. */
@@ -606,7 +797,7 @@ public class Compiler implements CompilerConstants {
 	 token = new Token();
 	 jj_ntk = -1;
 	 jj_gen = 0;
-	 for (int i = 0; i < 20; i++) jj_la1[i] = -1;
+	 for (int i = 0; i < 33; i++) jj_la1[i] = -1;
   }
 
   /** Constructor with generated Token Manager. */
@@ -622,7 +813,7 @@ public class Compiler implements CompilerConstants {
 	 token = new Token();
 	 jj_ntk = -1;
 	 jj_gen = 0;
-	 for (int i = 0; i < 20; i++) jj_la1[i] = -1;
+	 for (int i = 0; i < 33; i++) jj_la1[i] = -1;
   }
 
   /** Reinitialise. */
@@ -631,7 +822,7 @@ public class Compiler implements CompilerConstants {
 	 token = new Token();
 	 jj_ntk = -1;
 	 jj_gen = 0;
-	 for (int i = 0; i < 20; i++) jj_la1[i] = -1;
+	 for (int i = 0; i < 33; i++) jj_la1[i] = -1;
   }
 
   static private Token jj_consume_token(int kind) throws ParseException {
@@ -682,12 +873,12 @@ public class Compiler implements CompilerConstants {
   /** Generate ParseException. */
   static public ParseException generateParseException() {
 	 jj_expentries.clear();
-	 boolean[] la1tokens = new boolean[40];
+	 boolean[] la1tokens = new boolean[39];
 	 if (jj_kind >= 0) {
 	   la1tokens[jj_kind] = true;
 	   jj_kind = -1;
 	 }
-	 for (int i = 0; i < 20; i++) {
+	 for (int i = 0; i < 33; i++) {
 	   if (jj_la1[i] == jj_gen) {
 		 for (int j = 0; j < 32; j++) {
 		   if ((jj_la1_0[i] & (1<<j)) != 0) {
@@ -699,7 +890,7 @@ public class Compiler implements CompilerConstants {
 		 }
 	   }
 	 }
-	 for (int i = 0; i < 40; i++) {
+	 for (int i = 0; i < 39; i++) {
 	   if (la1tokens[i]) {
 		 jj_expentry = new int[1];
 		 jj_expentry[0] = i;
