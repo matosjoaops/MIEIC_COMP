@@ -11,6 +11,11 @@ public class Compiler
 
 PARSER_END(Compiler)
 
+SKIP:
+{
+    " "
+}
+
 TOKEN:
 {
     < IDENTIFIER : (["a"-"z","A"-"Z"])(["a"-"z","A"-"Z","0"-"9","_"])* >
