@@ -73,8 +73,13 @@ void Statement() : {}
     | "if" "(" Expression() ")" Statement() "else" Statement()
     | "while" "(" Expression() ")" Statement()
     | Expression() ";"
-    | <IDENTIFIER> "=" Expression() ";"
-    | <IDENTIFIER> "[" Expression() "]" "=" Expression() ";"
+    | <IDENTIFIER> Statement1()
+}
+
+void Statement1() : {}
+{
+    "=" Expression() ";"
+    | "[" Expression() "]" "=" Expression() ";"
 }
 
 void Expression() : {}
