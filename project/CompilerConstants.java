@@ -9,9 +9,9 @@ public interface CompilerConstants {
   /** End of File. */
   int EOF = 0;
   /** RegularExpression Id. */
-  int IDENTIFIER = 1;
+  int IDENTIFIER = 2;
   /** RegularExpression Id. */
-  int INTEGERLITERAL = 2;
+  int INTEGERLITERAL = 3;
 
   /** Lexical state. */
   int DEFAULT = 0;
@@ -19,6 +19,7 @@ public interface CompilerConstants {
   /** Literal token values. */
   String[] tokenImage = {
     "<EOF>",
+    "\" \"",
     "<IDENTIFIER>",
     "<INTEGERLITERAL>",
     "\"import\"",

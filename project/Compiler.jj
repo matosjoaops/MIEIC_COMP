@@ -46,13 +46,18 @@ void VarDeclaration() : {}
 
 void MethodDeclaration() : {}
 {
-    "public" Type() <IDENTIFIER> "(" (
+    "public" MethodDeclaration1()
+}
+
+void MethodDeclaration1() : {}
+{
+    Type() <IDENTIFIER> "(" (
     Type() <IDENTIFIER> ("," Type() <IDENTIFIER>)* )?
     ")" "{" (VarDeclaration())* (Statement())*
     "return" Expression() ";" "}"
-    | "public" "static" "void" "main" "(" "String" "[" "]" 
+    | "static" "void" "main" "(" "String" "[" "]" 
     <IDENTIFIER> ")" "{" (VarDeclaration())* (Statement())* "}"
-} 
+}
 
 void Type() : {}
 {

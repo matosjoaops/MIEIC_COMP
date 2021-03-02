@@ -17,7 +17,7 @@ public class Compiler implements CompilerConstants {
     label_1:
     while (true) {
       switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
-      case 3:{
+      case 4:{
         ;
         break;
         }
@@ -25,12 +25,12 @@ public class Compiler implements CompilerConstants {
         jj_la1[0] = jj_gen;
         break label_1;
       }
-      jj_consume_token(3);
+      jj_consume_token(4);
       jj_consume_token(IDENTIFIER);
       label_2:
       while (true) {
         switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
-        case 4:{
+        case 5:{
           ;
           break;
           }
@@ -38,19 +38,19 @@ public class Compiler implements CompilerConstants {
           jj_la1[1] = jj_gen;
           break label_2;
         }
-        jj_consume_token(4);
+        jj_consume_token(5);
         jj_consume_token(IDENTIFIER);
       }
-      jj_consume_token(5);
+      jj_consume_token(6);
     }
 }
 
   static final public void ClassDeclaration() throws ParseException {
-    jj_consume_token(6);
+    jj_consume_token(7);
     jj_consume_token(IDENTIFIER);
     switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
-    case 7:{
-      jj_consume_token(7);
+    case 8:{
+      jj_consume_token(8);
       jj_consume_token(IDENTIFIER);
       break;
       }
@@ -58,13 +58,13 @@ public class Compiler implements CompilerConstants {
       jj_la1[2] = jj_gen;
       ;
     }
-    jj_consume_token(8);
+    jj_consume_token(9);
     label_3:
     while (true) {
       switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
       case IDENTIFIER:
-      case 21:
-      case 22:{
+      case 22:
+      case 23:{
         ;
         break;
         }
@@ -77,7 +77,7 @@ public class Compiler implements CompilerConstants {
     label_4:
     while (true) {
       switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
-      case 10:{
+      case 11:{
         ;
         break;
         }
@@ -87,32 +87,38 @@ public class Compiler implements CompilerConstants {
       }
       MethodDeclaration();
     }
-    jj_consume_token(9);
+    jj_consume_token(10);
 }
 
   static final public void VarDeclaration() throws ParseException {
     Type();
     jj_consume_token(IDENTIFIER);
-    jj_consume_token(5);
+    jj_consume_token(6);
 }
 
   static final public void MethodDeclaration() throws ParseException {
+    jj_consume_token(11);
+    MethodDeclaration1();
+}
+
+  static final public void MethodDeclaration1() throws ParseException {
     switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
-    case 10:{
-      jj_consume_token(10);
+    case IDENTIFIER:
+    case 22:
+    case 23:{
       Type();
       jj_consume_token(IDENTIFIER);
-      jj_consume_token(11);
+      jj_consume_token(12);
       switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
       case IDENTIFIER:
-      case 21:
-      case 22:{
+      case 22:
+      case 23:{
         Type();
         jj_consume_token(IDENTIFIER);
         label_5:
         while (true) {
           switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
-          case 12:{
+          case 13:{
             ;
             break;
             }
@@ -120,7 +126,7 @@ public class Compiler implements CompilerConstants {
             jj_la1[5] = jj_gen;
             break label_5;
           }
-          jj_consume_token(12);
+          jj_consume_token(13);
           Type();
           jj_consume_token(IDENTIFIER);
         }
@@ -130,14 +136,14 @@ public class Compiler implements CompilerConstants {
         jj_la1[6] = jj_gen;
         ;
       }
-      jj_consume_token(13);
-      jj_consume_token(8);
+      jj_consume_token(14);
+      jj_consume_token(9);
       label_6:
       while (true) {
         switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
         case IDENTIFIER:
-        case 21:
-        case 22:{
+        case 22:
+        case 23:{
           ;
           break;
           }
@@ -152,15 +158,15 @@ public class Compiler implements CompilerConstants {
         switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
         case IDENTIFIER:
         case INTEGERLITERAL:
-        case 8:
-        case 11:
-        case 23:
-        case 25:
-        case 27:
+        case 9:
+        case 12:
+        case 24:
+        case 26:
         case 28:
         case 29:
         case 30:
-        case 31:{
+        case 31:
+        case 32:{
           ;
           break;
           }
@@ -170,29 +176,29 @@ public class Compiler implements CompilerConstants {
         }
         Statement();
       }
-      jj_consume_token(14);
-      Expression();
-      jj_consume_token(5);
-      jj_consume_token(9);
-      break;
-      }{
-      jj_consume_token(10);
       jj_consume_token(15);
+      Expression();
+      jj_consume_token(6);
+      jj_consume_token(10);
+      break;
+      }
+    case 16:{
       jj_consume_token(16);
       jj_consume_token(17);
-      jj_consume_token(11);
       jj_consume_token(18);
+      jj_consume_token(12);
       jj_consume_token(19);
       jj_consume_token(20);
+      jj_consume_token(21);
       jj_consume_token(IDENTIFIER);
-      jj_consume_token(13);
-      jj_consume_token(8);
+      jj_consume_token(14);
+      jj_consume_token(9);
       label_8:
       while (true) {
         switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
         case IDENTIFIER:
-        case 21:
-        case 22:{
+        case 22:
+        case 23:{
           ;
           break;
           }
@@ -207,15 +213,15 @@ public class Compiler implements CompilerConstants {
         switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
         case IDENTIFIER:
         case INTEGERLITERAL:
-        case 8:
-        case 11:
-        case 23:
-        case 25:
-        case 27:
+        case 9:
+        case 12:
+        case 24:
+        case 26:
         case 28:
         case 29:
         case 30:
-        case 31:{
+        case 31:
+        case 32:{
           ;
           break;
           }
@@ -225,7 +231,7 @@ public class Compiler implements CompilerConstants {
         }
         Statement();
       }
-      jj_consume_token(9);
+      jj_consume_token(10);
       break;
       }
     default:
@@ -237,17 +243,17 @@ public class Compiler implements CompilerConstants {
 
   static final public void Type() throws ParseException {
     switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
-    case 21:{
-      jj_consume_token(21);
-      jj_consume_token(19);
-      jj_consume_token(20);
-      break;
-      }
     case 22:{
       jj_consume_token(22);
+      jj_consume_token(20);
+      jj_consume_token(21);
+      break;
+      }
+    case 23:{
+      jj_consume_token(23);
       break;
       }{
-      jj_consume_token(21);
+      jj_consume_token(22);
       break;
       }
     case IDENTIFIER:{
@@ -263,22 +269,22 @@ public class Compiler implements CompilerConstants {
 
   static final public void Statement() throws ParseException {
     switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
-    case 8:{
-      jj_consume_token(8);
+    case 9:{
+      jj_consume_token(9);
       label_10:
       while (true) {
         switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
         case IDENTIFIER:
         case INTEGERLITERAL:
-        case 8:
-        case 11:
-        case 23:
-        case 25:
-        case 27:
+        case 9:
+        case 12:
+        case 24:
+        case 26:
         case 28:
         case 29:
         case 30:
-        case 31:{
+        case 31:
+        case 32:{
           ;
           break;
           }
@@ -288,52 +294,52 @@ public class Compiler implements CompilerConstants {
         }
         Statement();
       }
-      jj_consume_token(9);
+      jj_consume_token(10);
       break;
       }
-    case 23:{
-      jj_consume_token(23);
-      jj_consume_token(11);
-      Expression();
-      jj_consume_token(13);
-      Statement();
+    case 24:{
       jj_consume_token(24);
+      jj_consume_token(12);
+      Expression();
+      jj_consume_token(14);
+      Statement();
+      jj_consume_token(25);
       Statement();
       break;
       }
-    case 25:{
-      jj_consume_token(25);
-      jj_consume_token(11);
+    case 26:{
+      jj_consume_token(26);
+      jj_consume_token(12);
       Expression();
-      jj_consume_token(13);
+      jj_consume_token(14);
       Statement();
       break;
       }
     case IDENTIFIER:
     case INTEGERLITERAL:
-    case 11:
-    case 27:
+    case 12:
     case 28:
     case 29:
     case 30:
-    case 31:{
+    case 31:
+    case 32:{
       Expression();
-      jj_consume_token(5);
+      jj_consume_token(6);
       break;
       }{
       jj_consume_token(IDENTIFIER);
-      jj_consume_token(26);
+      jj_consume_token(27);
       Expression();
-      jj_consume_token(5);
+      jj_consume_token(6);
       break;
       }{
       jj_consume_token(IDENTIFIER);
-      jj_consume_token(19);
-      Expression();
       jj_consume_token(20);
-      jj_consume_token(26);
       Expression();
-      jj_consume_token(5);
+      jj_consume_token(21);
+      jj_consume_token(27);
+      Expression();
+      jj_consume_token(6);
       break;
       }
     default:
@@ -348,14 +354,14 @@ public class Compiler implements CompilerConstants {
     case INTEGERLITERAL:{
       jj_consume_token(INTEGERLITERAL);
       switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
-      case 4:
-      case 19:
-      case 32:
+      case 5:
+      case 20:
       case 33:
       case 34:
       case 35:
       case 36:
-      case 37:{
+      case 37:
+      case 38:{
         ExpressionLRFix();
         break;
         }
@@ -365,17 +371,17 @@ public class Compiler implements CompilerConstants {
       }
       break;
       }
-    case 27:{
-      jj_consume_token(27);
+    case 28:{
+      jj_consume_token(28);
       switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
-      case 4:
-      case 19:
-      case 32:
+      case 5:
+      case 20:
       case 33:
       case 34:
       case 35:
       case 36:
-      case 37:{
+      case 37:
+      case 38:{
         ExpressionLRFix();
         break;
         }
@@ -385,17 +391,17 @@ public class Compiler implements CompilerConstants {
       }
       break;
       }
-    case 28:{
-      jj_consume_token(28);
+    case 29:{
+      jj_consume_token(29);
       switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
-      case 4:
-      case 19:
-      case 32:
+      case 5:
+      case 20:
       case 33:
       case 34:
       case 35:
       case 36:
-      case 37:{
+      case 37:
+      case 38:{
         ExpressionLRFix();
         break;
         }
@@ -408,14 +414,14 @@ public class Compiler implements CompilerConstants {
     case IDENTIFIER:{
       jj_consume_token(IDENTIFIER);
       switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
-      case 4:
-      case 19:
-      case 32:
+      case 5:
+      case 20:
       case 33:
       case 34:
       case 35:
       case 36:
-      case 37:{
+      case 37:
+      case 38:{
         ExpressionLRFix();
         break;
         }
@@ -425,17 +431,17 @@ public class Compiler implements CompilerConstants {
       }
       break;
       }
-    case 29:{
-      jj_consume_token(29);
+    case 30:{
+      jj_consume_token(30);
       switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
-      case 4:
-      case 19:
-      case 32:
+      case 5:
+      case 20:
       case 33:
       case 34:
       case 35:
       case 36:
-      case 37:{
+      case 37:
+      case 38:{
         ExpressionLRFix();
         break;
         }
@@ -445,21 +451,21 @@ public class Compiler implements CompilerConstants {
       }
       break;
       }
-    case 30:{
-      jj_consume_token(30);
-      jj_consume_token(21);
-      jj_consume_token(19);
-      Expression();
+    case 31:{
+      jj_consume_token(31);
+      jj_consume_token(22);
       jj_consume_token(20);
+      Expression();
+      jj_consume_token(21);
       switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
-      case 4:
-      case 19:
-      case 32:
+      case 5:
+      case 20:
       case 33:
       case 34:
       case 35:
       case 36:
-      case 37:{
+      case 37:
+      case 38:{
         ExpressionLRFix();
         break;
         }
@@ -469,19 +475,19 @@ public class Compiler implements CompilerConstants {
       }
       break;
       }{
-      jj_consume_token(30);
+      jj_consume_token(31);
       jj_consume_token(IDENTIFIER);
-      jj_consume_token(11);
-      jj_consume_token(13);
+      jj_consume_token(12);
+      jj_consume_token(14);
       switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
-      case 4:
-      case 19:
-      case 32:
+      case 5:
+      case 20:
       case 33:
       case 34:
       case 35:
       case 36:
-      case 37:{
+      case 37:
+      case 38:{
         ExpressionLRFix();
         break;
         }
@@ -491,18 +497,18 @@ public class Compiler implements CompilerConstants {
       }
       break;
       }
-    case 31:{
-      jj_consume_token(31);
+    case 32:{
+      jj_consume_token(32);
       Expression();
       switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
-      case 4:
-      case 19:
-      case 32:
+      case 5:
+      case 20:
       case 33:
       case 34:
       case 35:
       case 36:
-      case 37:{
+      case 37:
+      case 38:{
         ExpressionLRFix();
         break;
         }
@@ -512,19 +518,19 @@ public class Compiler implements CompilerConstants {
       }
       break;
       }
-    case 11:{
-      jj_consume_token(11);
+    case 12:{
+      jj_consume_token(12);
       Expression();
-      jj_consume_token(13);
+      jj_consume_token(14);
       switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
-      case 4:
-      case 19:
-      case 32:
+      case 5:
+      case 20:
       case 33:
       case 34:
       case 35:
       case 36:
-      case 37:{
+      case 37:
+      case 38:{
         ExpressionLRFix();
         break;
         }
@@ -543,17 +549,13 @@ public class Compiler implements CompilerConstants {
 
   static final public void ExpressionLRFix() throws ParseException {
     switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
-    case 32:
     case 33:
     case 34:
     case 35:
     case 36:
-    case 37:{
+    case 37:
+    case 38:{
       switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
-      case 32:{
-        jj_consume_token(32);
-        break;
-        }
       case 33:{
         jj_consume_token(33);
         break;
@@ -574,6 +576,10 @@ public class Compiler implements CompilerConstants {
         jj_consume_token(37);
         break;
         }
+      case 38:{
+        jj_consume_token(38);
+        break;
+        }
       default:
         jj_la1[25] = jj_gen;
         jj_consume_token(-1);
@@ -581,14 +587,14 @@ public class Compiler implements CompilerConstants {
       }
       Expression();
       switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
-      case 4:
-      case 19:
-      case 32:
+      case 5:
+      case 20:
       case 33:
       case 34:
       case 35:
       case 36:
-      case 37:{
+      case 37:
+      case 38:{
         ExpressionLRFix();
         break;
         }
@@ -598,19 +604,19 @@ public class Compiler implements CompilerConstants {
       }
       break;
       }
-    case 19:{
-      jj_consume_token(19);
-      Expression();
+    case 20:{
       jj_consume_token(20);
+      Expression();
+      jj_consume_token(21);
       switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
-      case 4:
-      case 19:
-      case 32:
+      case 5:
+      case 20:
       case 33:
       case 34:
       case 35:
       case 36:
-      case 37:{
+      case 37:
+      case 38:{
         ExpressionLRFix();
         break;
         }
@@ -620,18 +626,18 @@ public class Compiler implements CompilerConstants {
       }
       break;
       }
-    case 4:{
-      jj_consume_token(4);
-      jj_consume_token(38);
+    case 5:{
+      jj_consume_token(5);
+      jj_consume_token(39);
       switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
-      case 4:
-      case 19:
-      case 32:
+      case 5:
+      case 20:
       case 33:
       case 34:
       case 35:
       case 36:
-      case 37:{
+      case 37:
+      case 38:{
         ExpressionLRFix();
         break;
         }
@@ -641,30 +647,30 @@ public class Compiler implements CompilerConstants {
       }
       break;
       }{
-      jj_consume_token(4);
+      jj_consume_token(5);
       jj_consume_token(IDENTIFIER);
-      jj_consume_token(11);
+      jj_consume_token(12);
       switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
       case IDENTIFIER:
       case INTEGERLITERAL:
-      case 11:
-      case 27:
+      case 12:
       case 28:
       case 29:
       case 30:
-      case 31:{
+      case 31:
+      case 32:{
         Expression();
         label_11:
         while (true) {
           switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
           case IDENTIFIER:
           case INTEGERLITERAL:
-          case 11:
-          case 27:
+          case 12:
           case 28:
           case 29:
           case 30:
-          case 31:{
+          case 31:
+          case 32:{
             ;
             break;
             }
@@ -680,16 +686,16 @@ public class Compiler implements CompilerConstants {
         jj_la1[30] = jj_gen;
         ;
       }
-      jj_consume_token(13);
+      jj_consume_token(14);
       switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
-      case 4:
-      case 19:
-      case 32:
+      case 5:
+      case 20:
       case 33:
       case 34:
       case 35:
       case 36:
-      case 37:{
+      case 37:
+      case 38:{
         ExpressionLRFix();
         break;
         }
@@ -724,10 +730,10 @@ public class Compiler implements CompilerConstants {
 	   jj_la1_init_1();
 	}
 	private static void jj_la1_init_0() {
-	   jj_la1_0 = new int[] {0x8,0x10,0x80,0x600002,0x400,0x1000,0x600002,0x600002,0xfa800906,0x600002,0xfa800906,0x400,0x600002,0xfa800906,0xfa800906,0x80010,0x80010,0x80010,0x80010,0x80010,0x80010,0x80010,0x80010,0x80010,0xf8000806,0x0,0x80010,0x80010,0x80010,0xf8000806,0xf8000806,0x80010,0x80010,};
+	   jj_la1_0 = new int[] {0x10,0x20,0x100,0xc00004,0x800,0x2000,0xc00004,0xc00004,0xf500120c,0xc00004,0xf500120c,0xc10004,0xc00004,0xf500120c,0xf500120c,0x100020,0x100020,0x100020,0x100020,0x100020,0x100020,0x100020,0x100020,0x100020,0xf000100c,0x0,0x100020,0x100020,0x100020,0xf000100c,0xf000100c,0x100020,0x100020,};
 	}
 	private static void jj_la1_init_1() {
-	   jj_la1_1 = new int[] {0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x3f,0x3f,0x3f,0x3f,0x3f,0x3f,0x3f,0x3f,0x3f,0x0,0x3f,0x3f,0x3f,0x3f,0x0,0x0,0x3f,0x3f,};
+	   jj_la1_1 = new int[] {0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x1,0x0,0x1,0x0,0x0,0x1,0x1,0x7e,0x7e,0x7e,0x7e,0x7e,0x7e,0x7e,0x7e,0x7e,0x1,0x7e,0x7e,0x7e,0x7e,0x1,0x1,0x7e,0x7e,};
 	}
 
   /** Constructor with InputStream. */
@@ -873,7 +879,7 @@ public class Compiler implements CompilerConstants {
   /** Generate ParseException. */
   static public ParseException generateParseException() {
 	 jj_expentries.clear();
-	 boolean[] la1tokens = new boolean[39];
+	 boolean[] la1tokens = new boolean[40];
 	 if (jj_kind >= 0) {
 	   la1tokens[jj_kind] = true;
 	   jj_kind = -1;
@@ -890,7 +896,7 @@ public class Compiler implements CompilerConstants {
 		 }
 	   }
 	 }
-	 for (int i = 0; i < 39; i++) {
+	 for (int i = 0; i < 40; i++) {
 	   if (la1tokens[i]) {
 		 jj_expentry = new int[1];
 		 jj_expentry[0] = i;
