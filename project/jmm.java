@@ -91,12 +91,6 @@ public class jmm implements jmmConstants {
 }
 
   static final public void VarDeclaration() throws ParseException {
-    if (jj_2_1(2)) {
-
-    } else {
-      jj_consume_token(-1);
-      throw new ParseException();
-    }
     Type();
     jj_consume_token(IDENTIFIER);
     jj_consume_token(24);
@@ -146,15 +140,9 @@ public class jmm implements jmmConstants {
       jj_consume_token(25);
       label_6:
       while (true) {
-        switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
-        case INT:
-        case BOOLEAN:
-        case IDENTIFIER:{
+        if (jj_2_1(2)) {
           ;
-          break;
-          }
-        default:
-          jj_la1[7] = jj_gen;
+        } else {
           break label_6;
         }
         VarDeclaration();
@@ -177,7 +165,7 @@ public class jmm implements jmmConstants {
           break;
           }
         default:
-          jj_la1[8] = jj_gen;
+          jj_la1[7] = jj_gen;
           break label_7;
         }
         Statement();
@@ -201,15 +189,9 @@ public class jmm implements jmmConstants {
       jj_consume_token(25);
       label_8:
       while (true) {
-        switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
-        case INT:
-        case BOOLEAN:
-        case IDENTIFIER:{
+        if (jj_2_2(2)) {
           ;
-          break;
-          }
-        default:
-          jj_la1[9] = jj_gen;
+        } else {
           break label_8;
         }
         VarDeclaration();
@@ -232,7 +214,7 @@ public class jmm implements jmmConstants {
           break;
           }
         default:
-          jj_la1[10] = jj_gen;
+          jj_la1[8] = jj_gen;
           break label_9;
         }
         Statement();
@@ -241,7 +223,7 @@ public class jmm implements jmmConstants {
       break;
       }
     default:
-      jj_la1[11] = jj_gen;
+      jj_la1[9] = jj_gen;
       jj_consume_token(-1);
       throw new ParseException();
     }
@@ -263,7 +245,7 @@ public class jmm implements jmmConstants {
       break;
       }
     default:
-      jj_la1[12] = jj_gen;
+      jj_la1[10] = jj_gen;
       jj_consume_token(-1);
       throw new ParseException();
     }
@@ -277,7 +259,7 @@ public class jmm implements jmmConstants {
       break;
       }
     default:
-      jj_la1[13] = jj_gen;
+      jj_la1[11] = jj_gen;
       ;
     }
 }
@@ -304,7 +286,7 @@ public class jmm implements jmmConstants {
           break;
           }
         default:
-          jj_la1[14] = jj_gen;
+          jj_la1[12] = jj_gen;
           break label_10;
         }
         Statement();
@@ -347,7 +329,7 @@ public class jmm implements jmmConstants {
       break;
       }
     default:
-      jj_la1[15] = jj_gen;
+      jj_la1[13] = jj_gen;
       jj_consume_token(-1);
       throw new ParseException();
     }
@@ -371,7 +353,7 @@ public class jmm implements jmmConstants {
       break;
       }
     default:
-      jj_la1[16] = jj_gen;
+      jj_la1[14] = jj_gen;
       jj_consume_token(-1);
       throw new ParseException();
     }
@@ -423,7 +405,7 @@ public class jmm implements jmmConstants {
       break;
       }
     default:
-      jj_la1[17] = jj_gen;
+      jj_la1[15] = jj_gen;
       jj_consume_token(-1);
       throw new ParseException();
     }
@@ -447,7 +429,7 @@ public class jmm implements jmmConstants {
       break;
       }
     default:
-      jj_la1[18] = jj_gen;
+      jj_la1[16] = jj_gen;
       jj_consume_token(-1);
       throw new ParseException();
     }
@@ -496,7 +478,7 @@ public class jmm implements jmmConstants {
           break;
           }
         default:
-          jj_la1[19] = jj_gen;
+          jj_la1[17] = jj_gen;
           jj_consume_token(-1);
           throw new ParseException();
         }
@@ -517,14 +499,14 @@ public class jmm implements jmmConstants {
         break;
         }
       default:
-        jj_la1[20] = jj_gen;
+        jj_la1[18] = jj_gen;
         jj_consume_token(-1);
         throw new ParseException();
       }
       break;
       }
     default:
-      jj_la1[21] = jj_gen;
+      jj_la1[19] = jj_gen;
       ;
     }
 }
@@ -564,7 +546,7 @@ public class jmm implements jmmConstants {
             break;
             }
           default:
-            jj_la1[22] = jj_gen;
+            jj_la1[20] = jj_gen;
             break label_11;
           }
           Expression();
@@ -572,7 +554,7 @@ public class jmm implements jmmConstants {
         break;
         }
       default:
-        jj_la1[23] = jj_gen;
+        jj_la1[21] = jj_gen;
         ;
       }
       jj_consume_token(29);
@@ -580,7 +562,7 @@ public class jmm implements jmmConstants {
       break;
       }
     default:
-      jj_la1[24] = jj_gen;
+      jj_la1[22] = jj_gen;
       jj_consume_token(-1);
       throw new ParseException();
     }
@@ -594,9 +576,65 @@ public class jmm implements jmmConstants {
     finally { jj_save(0, xla); }
   }
 
+  static private boolean jj_2_2(int xla)
+ {
+    jj_la = xla; jj_lastpos = jj_scanpos = token;
+    try { return (!jj_3_2()); }
+    catch(LookaheadSuccess ls) { return true; }
+    finally { jj_save(1, xla); }
+  }
+
+  static private boolean jj_3R_Type1_90_6_16()
+ {
+    if (jj_scan_token(30)) return true;
+    return false;
+  }
+
+  static private boolean jj_3R_Type1_90_5_15()
+ {
+    Token xsp;
+    xsp = jj_scanpos;
+    if (jj_3R_Type1_90_6_16()) jj_scanpos = xsp;
+    return false;
+  }
+
+  static private boolean jj_3_2()
+ {
+    if (jj_3R_VarDeclaration_63_5_12()) return true;
+    return false;
+  }
+
+  static private boolean jj_3R_VarDeclaration_63_5_12()
+ {
+    if (jj_3R_Type_83_5_13()) return true;
+    if (jj_scan_token(IDENTIFIER)) return true;
+    return false;
+  }
+
   static private boolean jj_3_1()
  {
-    if (jj_scan_token(0)) return true;
+    if (jj_3R_VarDeclaration_63_5_12()) return true;
+    return false;
+  }
+
+  static private boolean jj_3R_Type_83_5_14()
+ {
+    if (jj_scan_token(INT)) return true;
+    if (jj_3R_Type1_90_5_15()) return true;
+    return false;
+  }
+
+  static private boolean jj_3R_Type_83_5_13()
+ {
+    Token xsp;
+    xsp = jj_scanpos;
+    if (jj_3R_Type_83_5_14()) {
+    jj_scanpos = xsp;
+    if (jj_scan_token(20)) {
+    jj_scanpos = xsp;
+    if (jj_scan_token(22)) return true;
+    }
+    }
     return false;
   }
 
@@ -612,7 +650,7 @@ public class jmm implements jmmConstants {
   static private Token jj_scanpos, jj_lastpos;
   static private int jj_la;
   static private int jj_gen;
-  static final private int[] jj_la1 = new int[25];
+  static final private int[] jj_la1 = new int[23];
   static private int[] jj_la1_0;
   static private int[] jj_la1_1;
   static {
@@ -620,12 +658,12 @@ public class jmm implements jmmConstants {
 	   jj_la1_init_1();
 	}
 	private static void jj_la1_init_0() {
-	   jj_la1_0 = new int[] {0x80000,0x800000,0x200000,0x500010,0x4000,0x10000000,0x500010,0x500010,0xa401d2c,0x500010,0xa401d2c,0x508010,0x500010,0x40000000,0xa401d2c,0xa401d2c,0x40000000,0x8401524,0x400010,0x0,0x40800000,0x40800000,0x8401524,0x8401524,0x420000,};
+	   jj_la1_0 = new int[] {0x80000,0x800000,0x200000,0x500010,0x4000,0x10000000,0x500010,0xa401d2c,0xa401d2c,0x508010,0x500010,0x40000000,0xa401d2c,0xa401d2c,0x40000000,0x8401524,0x400010,0x0,0x40800000,0x40800000,0x8401524,0x8401524,0x420000,};
 	}
 	private static void jj_la1_init_1() {
-	   jj_la1_1 = new int[] {0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x2,0x0,0x2,0x0,0x0,0x0,0x2,0x2,0x1,0x2,0x0,0xfc,0xfc,0xfc,0x2,0x2,0x0,};
+	   jj_la1_1 = new int[] {0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x2,0x2,0x0,0x0,0x0,0x2,0x2,0x1,0x2,0x0,0xfc,0xfc,0xfc,0x2,0x2,0x0,};
 	}
-  static final private JJCalls[] jj_2_rtns = new JJCalls[1];
+  static final private JJCalls[] jj_2_rtns = new JJCalls[2];
   static private boolean jj_rescan = false;
   static private int jj_gc = 0;
 
@@ -647,7 +685,7 @@ public class jmm implements jmmConstants {
 	 token = new Token();
 	 jj_ntk = -1;
 	 jj_gen = 0;
-	 for (int i = 0; i < 25; i++) jj_la1[i] = -1;
+	 for (int i = 0; i < 23; i++) jj_la1[i] = -1;
 	 for (int i = 0; i < jj_2_rtns.length; i++) jj_2_rtns[i] = new JJCalls();
   }
 
@@ -662,7 +700,7 @@ public class jmm implements jmmConstants {
 	 token = new Token();
 	 jj_ntk = -1;
 	 jj_gen = 0;
-	 for (int i = 0; i < 25; i++) jj_la1[i] = -1;
+	 for (int i = 0; i < 23; i++) jj_la1[i] = -1;
 	 for (int i = 0; i < jj_2_rtns.length; i++) jj_2_rtns[i] = new JJCalls();
   }
 
@@ -680,7 +718,7 @@ public class jmm implements jmmConstants {
 	 token = new Token();
 	 jj_ntk = -1;
 	 jj_gen = 0;
-	 for (int i = 0; i < 25; i++) jj_la1[i] = -1;
+	 for (int i = 0; i < 23; i++) jj_la1[i] = -1;
 	 for (int i = 0; i < jj_2_rtns.length; i++) jj_2_rtns[i] = new JJCalls();
   }
 
@@ -699,7 +737,7 @@ public class jmm implements jmmConstants {
 	 token = new Token();
 	 jj_ntk = -1;
 	 jj_gen = 0;
-	 for (int i = 0; i < 25; i++) jj_la1[i] = -1;
+	 for (int i = 0; i < 23; i++) jj_la1[i] = -1;
 	 for (int i = 0; i < jj_2_rtns.length; i++) jj_2_rtns[i] = new JJCalls();
   }
 
@@ -716,7 +754,7 @@ public class jmm implements jmmConstants {
 	 token = new Token();
 	 jj_ntk = -1;
 	 jj_gen = 0;
-	 for (int i = 0; i < 25; i++) jj_la1[i] = -1;
+	 for (int i = 0; i < 23; i++) jj_la1[i] = -1;
 	 for (int i = 0; i < jj_2_rtns.length; i++) jj_2_rtns[i] = new JJCalls();
   }
 
@@ -726,7 +764,7 @@ public class jmm implements jmmConstants {
 	 token = new Token();
 	 jj_ntk = -1;
 	 jj_gen = 0;
-	 for (int i = 0; i < 25; i++) jj_la1[i] = -1;
+	 for (int i = 0; i < 23; i++) jj_la1[i] = -1;
 	 for (int i = 0; i < jj_2_rtns.length; i++) jj_2_rtns[i] = new JJCalls();
   }
 
@@ -862,7 +900,7 @@ public class jmm implements jmmConstants {
 	   la1tokens[jj_kind] = true;
 	   jj_kind = -1;
 	 }
-	 for (int i = 0; i < 25; i++) {
+	 for (int i = 0; i < 23; i++) {
 	   if (jj_la1[i] == jj_gen) {
 		 for (int j = 0; j < 32; j++) {
 		   if ((jj_la1_0[i] & (1<<j)) != 0) {
@@ -908,7 +946,7 @@ public class jmm implements jmmConstants {
 
   static private void jj_rescan_token() {
 	 jj_rescan = true;
-	 for (int i = 0; i < 1; i++) {
+	 for (int i = 0; i < 2; i++) {
 	   try {
 		 JJCalls p = jj_2_rtns[i];
 
@@ -917,6 +955,7 @@ public class jmm implements jmmConstants {
 			 jj_la = p.arg; jj_lastpos = jj_scanpos = p.first;
 			 switch (i) {
 			   case 0: jj_3_1(); break;
+			   case 1: jj_3_2(); break;
 			 }
 		   }
 		   p = p.next;
