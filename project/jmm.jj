@@ -55,7 +55,7 @@ void ImportDeclaration() : {}
 
 void ClassDeclaration() : {}
 {
-    <CLASS> <IDENTIFIER> ("extends" <IDENTIFIER>)? "{" (VarDeclaration())* (MethodDeclaration())* "}"
+    <CLASS> <IDENTIFIER> (<EXTENDS> <IDENTIFIER>)? "{" (VarDeclaration())* (MethodDeclaration())* "}"
 }
 
 void VarDeclaration() : {}
